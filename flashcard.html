@@ -21,16 +21,15 @@
   </style>
 <script type="text/javascript">
           counter=0;
-          changeThisPageFunc = function() {
+          updateCounter = function() {
               counter= counter+1;
-              var myh1;
-              myh1 = document.querySelector('h1');
-              myh1.innerHTML=counter;
+              countSpot = document.querySelector('#myCounter');
+              countSpot.innerHTML="Correct:"+ counter;
        }  
       </script>
 <body>
 <nav>
-<input type="Checkbox">
+<input type="Checkbox" onclick="updateCounter();">
 <section class=question>
 <p>What... is the air-speed velocity of an unladen swallow?</p>
 </section>
@@ -39,7 +38,7 @@
 </section>
 </nav>
 <nav>
-<input type="Checkbox">
+<input type="Checkbox" onclick="updateCounter();">
 <section class=question>
 <p>What... is your quest?</p>
 </section>
@@ -48,7 +47,7 @@
 </section>
 </nav>
 <nav>
-<input type="Checkbox">
+<input type="Checkbox" onclick="updateCounter();">
 <section class=question>
 <p>What... is your favorite color?</p>
 </section>
@@ -56,5 +55,6 @@
 <p>Blue.... no... wait.... ahhhhhh</p>
 </section>
 </nav>
+<h2 id="myCounter">Correct: 0/h2>
 </body>
 </html>
