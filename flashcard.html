@@ -21,7 +21,9 @@
   </style>
 <script type="text/javascript">
           counter=0;
-          updateCounter = function() {
+          updateCounter = function(cbId) {
+              theCheckbox= document.querySelector("#"+cbId);
+              if (theCheckbox.checked) {counter=counter+1;} else {counter=counter-1;}
               counter= counter+1;
               countSpot = document.querySelector('#myCounter');
               countSpot.innerHTML="Correct:"+ counter;
@@ -29,7 +31,7 @@
       </script>
 <body>
 <nav>
-<input type="Checkbox" onclick="updateCounter();">
+<input id="cb1" type="Checkbox" onclick="updateCounter(\"cb1\");">
 <section class=question>
 <p>What... is the air-speed velocity of an unladen swallow?</p>
 </section>
@@ -38,7 +40,7 @@
 </section>
 </nav>
 <nav>
-<input type="Checkbox" onclick="updateCounter();">
+<input od="cb2" type="Checkbox" onclick="updateCounter(\"cb2\");">
 <section class=question>
 <p>What... is your quest?</p>
 </section>
@@ -47,7 +49,7 @@
 </section>
 </nav>
 <nav>
-<input type="Checkbox" onclick="updateCounter();">
+<input id="cb3" type="Checkbox" onclick="updateCounter(\"cb3\");">
 <section class=question>
 <p>What... is your favorite color?</p>
 </section>
