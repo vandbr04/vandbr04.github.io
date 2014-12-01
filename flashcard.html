@@ -24,7 +24,6 @@
           updateCounter = function(cbId) {
               theCheckbox= document.querySelector("#"+cbId);
               if (theCheckbox.checked) {counter=counter+1;} else {counter=counter-1;}
-              counter= counter+1;
               countSpot = document.querySelector('#myCounter');
               countSpot.innerHTML="Correct:"+ counter;
        }  
