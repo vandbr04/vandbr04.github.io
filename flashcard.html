@@ -1,6 +1,12 @@
 <html>
   <style>
-  nav {position:relative; margin: 20px; float: left; height:175px; width: 100px;}
+  nav {
+    position:relative; 
+    margin: 20px; 
+    float: left; 
+    height:175px; 
+    width: 100px;
+  }
   section {
     position:absolute;
     top:0;
@@ -11,19 +17,32 @@
     background-color:lightblue;
     border-radius: 10px;
   }
-  input {position:absolute; top:200; left:62;}
-  .question {background-color:lightblue;
+  input {
+    position:absolute; 
+    top:200; 
+    left:62;
   }
-  .answer {background-color:lightgray; z-index: -1;}
-  nav:hover .question {display:none;}
-  input:checked ~ .question{background:lime;}
+  .question {
+    background-color:lightblue;
+  }
+  .answer {
+    background-color:lightgray; 
+    z-index: -1;
+  }
+  nav:hover .question {
+    display:none;
+  }
+  input:checked ~ .question{
+    background:lime;
+  }
   
   </style>
 <script type="text/javascript">
           counter=0;
           updateCounter = function(cbId) {
               theCheckbox= document.querySelector("#"+cbId);
-              if (theCheckbox.checked) {counter=counter+1;} else {counter=counter-1;}
+              if (theCheckbox.checked) {counter=counter+1;} 
+              else {counter=counter-1;}
               countSpot = document.querySelector('#myCounter');
               countSpot.innerHTML="Correct:"+ counter;
        }  
