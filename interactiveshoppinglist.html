@@ -18,6 +18,15 @@
       <script src="grocery.js" type="text/javascript"></script>
       <script type="text/javascript">
       window.onload=function() {restoreTasks('grocerylist')
+      additem.function() {
+         myUL=document.querySelector('#grocerylist');
+         myTextbox=document.querySelector('#grocerybox');
+         myLi=document.createElement('li');
+         myGrocery=document.createTextNode(myTextbox.value);
+         myLi.appendChild(myGrocery);
+         myUL.appendChild(myLi);
+         myTextbox.value="";
+      }
       </script>
    </body>
 </html>
