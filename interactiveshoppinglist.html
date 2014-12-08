@@ -2,22 +2,26 @@
 <html>
    <body>
       <h1>Grocery List</h1>
-      <ul id="meats">
+      <main>
+      <ul id="grocerylist">
       </ul>
-      <label for="itemi">Item:</label>
-      <input type="text" id="itemi"/> <br>
-      <select id="priority">
+      </main>
+      <label for="grocerybox">Grocery Item:</label>
+      <input type="text" id="grocerybox" value="grocery"/> <br>
+      <select id="category">
       <option>Meat</option>
       <option>Vegetables</option>
       <option>Fruit</option>
       <option>Candy</option>
       </select>
-      <button onclick="additem();">Add Item</button>
-      <script>
+      <button onclick="additem();">New</button>
+      <script src="grocery.js" type="text/javascript"></script>
          additem=function() {
-            t=document.querySelector("#meats")
+            t=document.querySelector("#grocerylist")
             trow=document.createElement("")
          }
+      <script type="text/javascript">
+      window.onload=function() {restoreTasks('grocerylist')
       </script>
    </body>
 </html>
