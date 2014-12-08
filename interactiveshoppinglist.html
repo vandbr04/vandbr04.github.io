@@ -2,7 +2,8 @@
 <html>
    <body>
       <h1>Grocery List</h1>
-      <ul>
+      <ul id="meats">
+      </ul>
       <label for="itemi">Item:</label>
       <input type="text" id="itemi"/> <br>
       <select id="priority">
@@ -12,7 +13,11 @@
       <option>Candy</option>
       </select>
       <button onclick="additem();">Add Item</button>
-
-      </ul>
+      <script>
+         additem=function() {
+            t=document.querySelector("#meats")
+            trow=document.createElement("")
+         }
+      </script>
    </body>
 </html>
