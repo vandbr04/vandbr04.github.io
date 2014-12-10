@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="shop.css" type="text/css">
 <html>
    <body>
-      <h1>Grocery List</h1>
+      <h1>Grocery List1</h1>
       <main>
       <ul id="grocerylist">
       </ul>
@@ -23,7 +23,7 @@
          myGrocery=document.createTextNode(myTextbox.value);
          myCb=document.createElement('input');
          myCb.type="checkbox";
-         myLi.appendChild('myCb');
+         myLi.appendChild(myCb);
          myLi.appendChild(myGrocery);
          myUL.appendChild(myLi);
          myTextbox.value="";
