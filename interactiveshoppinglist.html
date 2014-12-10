@@ -23,6 +23,7 @@
          myGrocery=document.createTextNode(myTextbox.value);
          myCb=document.createElement('input');
          myCb.type="checkbox";
+         myLi.appendChild('myCb');
          myLi.appendChild(myGrocery);
          myUL.appendChild(myLi);
          myTextbox.value="";
