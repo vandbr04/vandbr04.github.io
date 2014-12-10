@@ -8,7 +8,7 @@
       </main>
       <label for="grocerybox">Grocery Item:</label>
       <input type="text" id="grocerybox" value="grocery"/> <br>
-      <input type="checkbox" name="groceryboxcheck"><br />
+      <input type="checkbox" id="groceryboxcheck"><br />
       <select id="category">
       <option>Meat</option>
       <option>Vegetables</option>
@@ -20,7 +20,6 @@
       additem=function() {
          myUL=document.querySelector('#grocerylist');
          myTextbox=document.querySelector('#grocerybox');
-         myTextbox=document.querySelector('#groceryboxcheck');
          myLi=document.createElement('li');
          myGrocery=document.createTextNode(myTextbox.value);
          myLi.appendChild(myGrocery);
