@@ -8,7 +8,6 @@
       </main>
       <label for="grocerybox">Grocery Item:</label>
       <input type="text" id="grocerybox" value="grocery"/> <br>
-      <input type="checkbox" id="groceryboxcheck"><br />
       <select id="category">
       <option>Meat</option>
       <option>Vegetables</option>
@@ -25,8 +24,12 @@
          myLi.appendChild(myGrocery);
          myUL.appendChild(myLi);
          myTextbox.value="";
-         myLi.classList.add("done")
       }
       </script>
+      <script src="grocery.js"
+      checkme=function() {
+         myLi.classList.add("done")
+         
+      }
    </body>
 </html>
