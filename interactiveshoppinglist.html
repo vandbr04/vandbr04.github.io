@@ -21,9 +21,17 @@
          myTextbox=document.querySelector('#grocerybox');
          myLi=document.createElement('li');
          myGrocery=document.createTextNode(myTextbox.value);
+         myCb=document.createElement('input');
+         myCb.type="checkbox";
          myLi.appendChild(myGrocery);
          myUL.appendChild(myLi);
          myTextbox.value="";
+      }
+      </script>
+      <script src="grocery.js"
+      checkme=function() {
+         myLi.classList.add("done")
+         
       }
       </script>
       
