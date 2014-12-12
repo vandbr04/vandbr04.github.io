@@ -1,0 +1,85 @@
+html>
+   <body>
+      <h1 id=a>Hello World!!</h1>
+      <button onclick="changeThisPageFunc();">Click Me!</button>
+      <h1 id=b>Hello Web Programming</h1>
+       <h1 id=c>Luther</h1>
+       <h1 id=d>Internet</h1>
+       
+      <script type="text/javascript">
+         changeThisPageFunc = function() {
+            var myH1;
+            var myH2;
+            var myH3;
+            var myH4;
+            document.body.style.backgroundColor = "yellow";
+            myH1 = document.querySelector('h1#b');
+            myH1.style.backgroundColor = "lime";
+            myH2 = document.querySelector('h1#a');
+            myH2.style.backgroundColor="blue";
+            myH3 = document.querySelector('h1#c');
+            myH3.style.backgroundColor = "blue";
+            myH4 = document.querySelector('h1#d');
+            myH4.style.backgroundColor="lime";
+         }
+      </script>
+   </body>
+</html>
+
+<html>
+    <head>
+        <style>
+            h1 {position: relative}
+        </style>
+    </head>
+<body>
+<button onclick="stop();">Stop</button>
+    <h1>NOPE</h1>
+    <script>
+      counter=0;
+      changeColor = function() {
+      red = Math.floor(Math.random()*255);
+      green = Math.floor(Math.random()*255);
+      blue = Math.floor(Math.random()*255);
+      colorStr = "rgb(" + red + "," + green + "," + blue + ")";
+      document.body.style.backgroundColor = colorStr;
+            counter=counter+.1
+      myTop=Math.floor(Math.random()*300)
+      myLeft=Math.floor(Math.random()*500)
+      myH1= document.querySelector('h1')
+      myH1.style.top= myTop+'px';
+      myH1.style.left=myLeft+'px';
+      //window.setInterval(changeColor, 1000);
+  }
+  stop = function() {
+      window.clearInterval(intId);
+  }
+  intId = window.setInterval(changeColor, 333);
+</script>
+</body>
+</html>
+
+<html>
+   <body>
+       <button onclick="savetime()">Time</button>
+       <table id="timetable">
+       </table>
+       <script type="text/javascript">
+          counter=0
+          savetime = function() {
+             t = document.querySelector("#timetable");
+             counter=counter+1;
+             trow = document.createElement("tr");
+             td = document.createElement("td");
+             contents = document.createTextNode(Date());
+             td1= document.createElement('td');
+             td1.innerHTML=counter;
+             td.appendChild(contents);
+             trow.appendChild(td);
+             trow.appendChild(td1);
+             t.appendChild(trow);
+          }
+       </script>
+   </body>
+</html>
+
