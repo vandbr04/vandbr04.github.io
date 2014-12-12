@@ -83,3 +83,43 @@ html>
    </body>
 </html>
 
+<link rel="stylesheet" href="shop.css" type="text/css">
+<html>
+   <body>
+      <h1>Grocery List1</h1>
+      <main>
+      <ul id="grocerylist">
+      </ul>
+      </main>
+      <label for="grocerybox">Grocery Item:</label>
+      <input type="text" id="grocerybox" value="grocery"/> <br>
+      <select id="category">
+      <option>Meat</option>
+      <option>Vegetables</option>
+      <option>Fruit</option>
+      <option>Candy</option>
+      </select>
+      <button onclick="additem();">New</button>
+      <script> 
+      additem=function() {
+         myUL=document.querySelector('#grocerylist');
+         myTextbox=document.querySelector('#grocerybox');
+         myLi=document.createElement('li');
+         myGrocery=document.createTextNode(myTextbox.value);
+         myCb=document.createElement('input');
+         myCb.type="checkbox";
+         myLi.appendChild(myCb);
+         myLi.appendChild(myGrocery);
+         myUL.appendChild(myLi);
+         myTextbox.value="";
+      }
+      </script>
+      <script src="grocery.js"
+      checkme=function() {
+         myLi.classList.add("done")
+         
+      }
+      </script>
+      
+   </body>
+</html>
